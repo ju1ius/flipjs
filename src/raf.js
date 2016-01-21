@@ -26,6 +26,11 @@ export default {
    *  FLIP animations.
    */
   play_: function (startTime) {
+    if (this.easing_ === 'linear') {
+        this.easing_ = t => t;
+    } else if (typeof this.easing_ !== 'function') {
+      throw new Error('An easing function must be provided.');
+    }
 
     if (typeof startTime === 'undefined')
       this.start_ = window.performance.now() + this.delay_;
