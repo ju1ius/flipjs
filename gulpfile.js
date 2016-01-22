@@ -127,6 +127,11 @@ gulp.task('default', function() {
 gulp.task('docs', shell.task(
     ['./node_modules/jsdoc/jsdoc.js ./src/flip.js -d ./docs']));
 
+gulp.task('build', function() {
+  isProd = true;
+  return runSequence('clean', 'getversion', 'scripts');
+});
+
 gulp.task('dev', function() {
   return runSequence('clean', 'getversion', 'scripts', 'watch');
 });
