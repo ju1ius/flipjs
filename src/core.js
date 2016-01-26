@@ -144,7 +144,7 @@ export default class FLIP {
 
         flips.forEach(flip => flip.play(startTime));
       }
-    }
+    };
   }
 
   /**

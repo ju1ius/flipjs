@@ -8,8 +8,9 @@
   "parser": "babel-eslint",
   "extends": "eslint:recommended",
   "rules": {
+    "semi": [2, "always"],
     "max-len": [2, 80, 2],
-    "quotes": [2, "single"],
+    "quotes": [2, "single", "avoid-escape"],
     "eol-last": [0],
     "no-console": [0],
     "no-unused-vars": [2, {"vars": "all", "args": "none"}]
